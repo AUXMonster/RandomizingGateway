@@ -85,7 +85,7 @@ def warn(interface):
 	#s = socket.fromfd(interface.fileno(), socket.AF_INET, socket.SOCK_STREAM)
 	while True:
 		data = interface.read(2**16)
-		ip = IP(interface.read(2**16))
+		p = IP(interface.read(2**16))
 		s = p.getlayer(TCP)
 		if s:
 			p.src, p.dst = p.dst, p.src

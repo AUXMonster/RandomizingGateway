@@ -115,5 +115,5 @@ run(["ip", "route", "add", "default", "dev", "interior", "src", address, "table"
 
 with open("/etc/NetworkManager/dispatcher.d/10-update.py", "w") as f:
 	f.write(update_script)
-run(["chmod", "777", "/etc/NetworkManager/dispatcher.d/10-update.py"])
+run(["chmod", "755", "/etc/NetworkManager/dispatcher.d/10-update.py"])
 print("All done!")
